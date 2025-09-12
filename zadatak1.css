@@ -1,0 +1,17 @@
+@media (min-width: 480px) {
+h1 {
+color: red;
+}
+}
+
+@media (min-width: 768px) {
+h1 {
+color: blue;
+}
+}
+
+@media (min-width: 1024px) {
+h1 {
+color: black;
+}
+}

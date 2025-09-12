@@ -1,0 +1,51 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body:after {
+font-size: 300%;
+font-weight: bold;
+color: #FFF;
+text-align: center;
+position: fixed;
+background-color: tomato;
+width: 100%;
+}
+
+/* prva točka */
+@media (min-width: 320px) {
+body:after {
+content: "320 do 480px";
+}
+}
+
+@media (min-width: 320px) {
+body:after {
+content: "320 do 480px";
+}
+}
+
+/* druga točka */
+@media (min-width: 480px) {
+body:after {
+content: "480 do 768px";
+background-color: pink;
+}
+}
+
+/* treća točka */
+@media (min-width: 768px) {
+body:after {
+content: "768 do 1024px";
+background-color: indigo;
+}
+}
+
+/* četvrta točka */
+@media (min-width: 1024px) {
+body:after {
+content: "1024 +";
+background-color: tomato;
+}
+}
