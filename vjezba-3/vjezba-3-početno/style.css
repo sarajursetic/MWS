@@ -1,0 +1,58 @@
+:root {
+    --blue: #03070d;
+    --white: #ffffff;
+    --lightblue: #437AE3;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  position: relative;
+  margin: 0;
+  min-height: 100vh;
+  background-color: hsl(0, 0%, 0%);
+  background-image: url("/img/space-bg.jpg");
+  color: #ffffff;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  overflow-x: hidden;
+}
+body::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(hsla(0, 0%, 0%, 0.5) 70%, transparent 110%);
+  z-index: -1;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+main {
+    padding-top: 150px;
+}
+
+.wrapper {
+  width: min(100% - 3rem, 56.25rem);
+  margin: 0 auto;
+}
+
+.cat {
+  display: grid;
+  justify-items: center;
+  padding-block: 2rem;
+}
+.cat img {
+  margin-block-end: 1.5rem;
+}
+.cat p {
+  max-width: 70ch;
+}
+
+
