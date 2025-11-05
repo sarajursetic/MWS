@@ -1,0 +1,259 @@
+:root {
+    --blue: #03070d;
+    --white: #ffffff;
+    --lightblue: #437AE3;
+    --bluelight: #09121f;
+    --bluehover: #1d2e45;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  position: relative;
+  margin: 0;
+  min-height: 100vh;
+  background-color: hsl(0, 0%, 0%);
+  background-image: url("img/space-bg.jpg");
+  color: var(--white);
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  overflow-x: hidden;
+}
+body::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(hsla(0, 0%, 0%, 0.5) 70%, transparent 110%);
+  z-index: -1;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+main {
+    padding-top: 150px;
+}
+
+.wrapper {
+  width: min(100% - 3rem, 56.25rem);
+  margin: 0 auto;
+}
+
+.cat {
+  display: grid;
+  justify-items: center;
+  padding-block: 2rem;
+}
+.cat img {
+  margin-block-end: 1.5rem;
+}
+.cat p {
+  max-width: 70ch;
+}
+
+.logo:hover{
+    cursor: pointer;
+}
+
+.navbar{
+    background-color: var(--blue);
+    color: var(--white);
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 90px;
+    padding: 0 20px;
+    z-index: 999;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.menu ul{
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+}
+
+.menu_link a{
+    color: var(--white);
+    text-decoration: none;
+    font-size: 3vw;
+    padding: 0 1vw;
+    transition: all .3s ease-in-out;
+}
+
+.menu_link a:hover{
+    color: var(--lightblue);
+}
+
+#hamburger{
+    display: none;
+    position: relative;
+    width: 60px;
+    height: 45px;
+    right: 20px;
+    cursor: pointer;
+}
+
+#hamburger span{
+    display: block;
+    position: absolute;
+    height: 2px;
+    width: 100%;
+    background-color: var(--white);
+    opacity: 1;
+    left: 0;
+    transform: rotate(0deg);
+    transition: .25s ease-in-out;
+}
+
+#hamburger span:nth-child(1){
+    top: 0px;
+    transform-origin: left center;
+}
+
+#hamburger span:nth-child(2){
+    top: 18px;
+    transform-origin: left center;
+}
+
+#hamburger span:nth-child(3){
+    top: 36px;
+    transform-origin: left center;
+}
+
+#hamburger.open span:nth-child(1){
+    transform: rotate(45deg);
+    top: -3px;
+    left: 9px;
+}
+
+#hamburger.open span:nth-child(2){
+opacity: 0;
+width: 0%;
+}
+
+#hamburger.open span:nth-child(3){
+    transform: rotate(-45deg);
+    top: 39px;
+    left: 8px;
+}
+
+
+/*dropdown*/
+
+/* osnovni izgled navigacije */
+
+button{
+    color: var(--white);
+    text-decoration: none;
+    font-size: 3vw;
+    padding: 0 1vw;
+    transition: all .3s ease-in-out;
+    background-color: var(--blue);
+    border: none;
+}
+
+.menu_link a:hover, .dropdown:hover .dropbtn {
+
+  color: var(--lightblue);
+}
+
+/* dropdown klasični stil za desktop */
+.dropdown {
+  position: relative;
+}
+
+.dropdown-content {
+    background-color: var(--bluelight);
+    color: var(--white);
+  display: none;
+  position: absolute;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: var(--white);
+  padding: 12px 16px;
+  display: block;
+  text-decoration: none;
+}
+
+.dropdown-content a:hover {
+  color: var(--lightblue);
+}
+
+.show {
+  display: block;
+}
+
+
+/* RESPONSIVE STIL */
+@media (max-width: 1024px) {
+  #hamburger{ 
+    display: block; 
+  } 
+
+  .menu ul { 
+    display: none; 
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    top: 70px; 
+    right: 0;
+    width: 100%;
+    background-color: var(--blue); 
+    padding: 20px 0; 
+    border-radius: 3px;
+  }
+
+  .menu.responsive ul {
+    display: flex;
+  }
+
+  .menu_link a, .dropbtn {
+    width: 100%;
+    text-align: left;
+    padding: 5px 20px;
+  }
+
+  .dropdown-content {
+    text-align: center;
+    background-color: var(--bluelight);
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100vw;             
+    height: auto;
+    box-shadow: none;
+    border-radius: 0;    
+    margin-bottom: 20px;    
+  }
+
+  .dropdown-content a {
+    text-align: center;
+    color: var(--white);
+    padding: 12px 20px;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .dropdown-content a:hover {
+    background-color: var(--bluehover);
+    color: var(--lightblue);
+  }
+
+
+   .dropbtn{
+    text-align: center;
+  }
+}
