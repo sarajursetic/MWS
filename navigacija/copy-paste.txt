@@ -1,0 +1,75 @@
+
+<div class="open-ucenici">
+        <div class="ucenici-column">
+        <div class="prvi-blok">
+            <p>RASPORED SATI</p>
+            <p>PREPORUKE</p>
+        </div>
+            <hr>
+        <div class="prvi-blok">
+            <p>KALENDAR RADA</p>
+            <p>ZAHTJEVI</p>
+        </div>
+            <hr>
+        <div class="prvi-blok">
+            <p>ZAMOLBE, ISPRIČNICE, PRIJEVOZ</p>
+            <p>UPUTE ZA ZAVRŠNI RAD</p>
+        </div>
+            <hr>
+        <div class="prvi-blok">
+            <p>VREMENICI</p>
+            <p>WIFI</p>
+        </div>    
+            <hr>
+        <div class="prvi-blok">
+            <p>DRŽAVNA MATURA</p>
+            <p>POTVRDE</p>
+        </div>    
+            <hr>
+        <div class="prvi-blok">
+            <p>ŠKOLSKA KNJIŽNICA</p>
+            <p>ENGLISH</p>
+        </div>
+        </div>
+    </div>
+
+
+
+
+.ucenici-column{
+    width: 300px;
+    height: auto;
+    background-color: var(--grey);
+    padding: 20px;
+    border-radius: 30px;
+}
+
+.ucenici-column h1{
+    text-align: center;
+    color: var(--white);
+    font-size: 20px;
+}
+
+.ucenici-column p{
+    display: inline-block;
+    font-size: 10px;
+    color: var(--white);
+}
+
+.ucenici-column p:nth-of-type(2n) {
+    padding-left: 10px;
+}
+
+.double-row {
+    display: flex;
+    gap: 10px;
+}
+
+.double-row p {
+    margin: 0;
+}
+
+
+hr{
+    border: 1px solid var(--hrline);
+}

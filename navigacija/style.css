@@ -1,0 +1,233 @@
+:root{
+    --black: #000000;
+    --grey: #212121;
+    --lightgrey: #9A9A9A;
+    --hrline: #3D3D3D;
+    --gray: #C9C9C9;
+    --white: #ffffff;
+    --green: #3FAD57;
+    --darkgreen: #207C34;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  font-family: "Raleway", sans-serif;
+}
+
+#active-btn{
+    background-color: var(--grey);
+}
+a #active-btn{
+     color: var(--green);
+}
+
+header{
+    height: 1080px;
+    width: 100%;
+    background-image: url(header-background.png);
+    background-repeat: no-repeat;
+    padding: 30px;
+}
+
+nav{
+    background-color: var(--black);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 20px;
+    align-items: center;
+    border-radius: 50px;
+}
+
+.linkovi ul{
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.not-active-link img{
+    display: flex, inline;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo{
+    margin-left: 30px ;
+}
+
+.linkovi{
+    margin-right: 30px ;
+}
+
+.linkovi ul li a{
+    text-decoration: none;
+    padding: 0 1vw;
+    color: var(--white);
+    font-family: "Raleway", sans-serif;
+    font-weight: 800;
+    font-size: 15px;
+}
+#active-link{
+    color: var(--green);
+}
+
+.btn-nav{
+    background-color: var(--green);
+    padding: 10px;
+    border-radius: 100px;
+    border: none;
+}
+
+.btn-nav:hover{
+    background-color: var(--darkgreen);
+    color: var(--gray);
+    transition: 0.5s ease-in-out;
+}
+
+
+.search{
+    background-color: var(--grey);
+    width: 500px;
+    border-radius: 25px;
+    padding: 10px;
+}
+
+.search img{
+    padding-left: 10px;
+}
+
+
+/*ucenici html*/
+
+.open-ucenici{
+    display: none;
+    flex-direction: row;
+width: 1700px;
+height: auto;
+margin: 20px;
+padding: 40px;
+background-color: var(--black);
+border-radius: 30px;
+}
+
+.ucenici-column{
+    background-color: var(--grey);
+    border-radius: 30px;
+    width: 400px;
+    height: auto;
+    padding: 20px ;
+    padding-bottom: 0;
+    padding-top: 10px;
+    display: grid;
+    grid-template-columns: 1fr; 
+    gap: 0px;
+}
+
+.ucenici-column p {
+    margin: 0;
+}
+
+
+.ucenici-column h1{
+    text-align: center;
+    color: var(--white);
+    font-size: 20px;
+}
+
+.ucenici-column p{
+    display: inline-block;
+    font-size: 10px;
+    padding: 10px;
+    color: var(--white);
+}
+
+.prvi-blok,
+.drugi-blok,
+.treci-blok,
+.cetvrti-blok,
+.peti-blok {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0px;
+    border-bottom: 1px solid var(--hrline);
+}
+.peti-blok{
+    border: none;
+    gap: none;
+
+}
+
+ hr {
+    width: 100%;
+    border: 1px solid var(--hrline);
+}
+
+.smjerovi {
+    margin-left: 20px;
+    display: grid;
+    grid-template-columns: repeat(4, 300px); 
+    gap: 20px; 
+
+}
+
+.smjerovi > * {
+    width: 100%; 
+    height: auto;
+    border-radius: 30px;
+}
+
+.smjerovi .green {
+    grid-column: 1 /1;
+    background-color: var(--green);
+    color: white;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.grey {
+    border-radius: 30px;
+    background: var(--grey);
+    color: white;
+    padding: 25px;
+    border-radius: 30px;
+}
+
+.grey p{
+    font-size: 10px;
+    color: var(--gray);
+}
+
+.grey h3{
+    font-size: 15px;
+}
+
+.grey h3 img{
+    padding-right: 5px;
+}
+
+.open-ucenici {
+    display: none; /* kontrolirano iz JS-a */
+    overflow: hidden;
+
+    /* animacijske vrijednosti */
+    max-height: 0;
+    opacity: 0;
+    transform: translateY(-10px);
+    transition:
+        max-height 0.4s ease,
+        opacity 0.35s ease,
+        transform 0.4s ease;
+}
+
+.open-ucenici.show {
+    max-height: 900px; /* dovoljno veliko da stane cijeli sadržaj */
+    opacity: 1;
+    transform: translateY(0);
+}
+
